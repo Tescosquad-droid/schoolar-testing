@@ -3,9 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function autoNext(id: number, key: string, code: string) {
-  if (code === `Digit${key}`) {
-    document.getElementById(`${id + 1}`)?.focus()
-  } else if (key === "Backspace" && id !== 1) {
+  document.getElementById(`${id + 1}`)?.focus()
+  if (key === "Backspace" && id !== 1) {
     document.getElementById(`${id - 1}`)?.focus()
   }
 }
